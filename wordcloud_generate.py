@@ -1,7 +1,12 @@
 import json
+
 import jieba
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud, STOPWORDS
+
+'''
+读取json，提取评论内容，生成词云
+'''
 
 # 读取数据
 with open("comments.json", 'r', encoding='utf-8') as f:
@@ -13,7 +18,7 @@ with open("comments.json", 'r', encoding='utf-8') as f:
     # 结巴分词
     word_list = jieba.lcut(" ".join(contents))
 
-    ##==============词频统计=============
+    # ==============词频统计=============
     word_freq = {}  # 词频统计的字典
     for word in word_list:  # 这一步是对近义词进行统计
         if (word in STOPWORDS) or len(word) == 1:  # 禁用词和低频词不统计了
@@ -34,7 +39,7 @@ with open("comments.json", 'r', encoding='utf-8') as f:
             fp.write(word + '\n')  # 将前五十词频文件保存
         print(word, freq)  # 打印排名前50%的单词
 
-    ##=====词云===
+    # =====词云===
     wc = WordCloud(width=1024, height=768, background_color='white', font_path='./simhei.ttf',
                    stopwords=STOPWORDS, max_font_size=400, random_state=50)
     # 将分词后数据传入云图

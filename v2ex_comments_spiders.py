@@ -4,6 +4,11 @@ import urllib.request
 
 from bs4 import BeautifulSoup
 
+'''
+爬取帖子评论信息保存至json文件，最后生成词云
+v2ex地址 https://www.v2ex.com/t/627214
+
+'''
 headers = {
     'User-Agent': r'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) '
                   r'Chrome/45.0.2454.85 Safari/537.36 115Browser/6.0.3',
