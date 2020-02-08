@@ -10,8 +10,8 @@ v2ex地址 https://www.v2ex.com/t/627214
 
 '''
 headers = {
-    'User-Agent': r'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) '
-                  r'Chrome/45.0.2454.85 Safari/537.36 115Browser/6.0.3',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.85 '
+                  'Safari/537.36 115Browser/6.0.3',
     'Connection': 'keep-alive'
 }
 
