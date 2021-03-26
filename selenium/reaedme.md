@@ -18,7 +18,7 @@ https://github.com/joyzoursky/docker-python-chromedriver
 docker 启动服务：
 
 ```shell script
-# 自带vnc 可远程vnc链接查看。vnc链接密码:
+# 自带vnc 可远程vnc链接查看。vnc链接密码:secret
 docker run -d --rm --name scd -p 4444:4444 -p 5900:5900 -v /dev/shm:/dev/shm selenium/standalone-chrome-debug
 # 不带 vnc 
 docker run -d --rm --name scd -p 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome
