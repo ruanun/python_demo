@@ -1,0 +1,15 @@
+version: "2.0"
+services:
+  py-script:
+    image: ruanun/python-docker-selenium:3.8
+    volumes:
+      - ./spider.py:/code/script.py  # 这里把刚刚的代码映射到这个目录
+    command: python /code/script.py  # 定义启动容器执行的命令
+    depends_on:
+      - selenium-chrome
+  selenium-chrome:
+    image: selenium/standalone-chrome:latest
+#    image: selenium/standalone-chrome-debug:latest
+    ports:
+      - "4444:4444"
+    shm_size: 2g
