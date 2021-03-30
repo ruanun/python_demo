@@ -19,3 +19,5 @@ RUN pip install --upgrade pip
 
 # install selenium
 RUN pip install selenium
+
+RUN apt-get autoclean && apt-get clean

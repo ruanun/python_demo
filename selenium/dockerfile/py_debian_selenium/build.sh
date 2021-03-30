@@ -1,1 +1,3 @@
-docker build -t ruanun/python-docker-selenium:3.8-debian .
+docker build -t ruanun/debian-python-selenium-chrome:3.8 .
+
+#docker push ruanun/debian-python-selenium-chrome:3.8
