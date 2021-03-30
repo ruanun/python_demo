@@ -11,7 +11,10 @@ RUN pip3 install selenium
 RUN wget -O chromedriver.zip http://chromedriver.storage.googleapis.com/`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE`/chromedriver_linux64.zip
 RUN unzip chromedriver.zip -d /usr/local/bin/
 
+RUN apt-get autoclean && apt-get clean
+
 ## switch back to default user
 #USER 1000
+
 
 
